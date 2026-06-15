@@ -62,7 +62,7 @@ export const topics: Topic[] = [
       "TLS 핸드셰이크로 인증서를 교환하고 대칭키를 합의해 안전한 채널을 만드는 흐름.",
     domain: "network",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "dns-resolution",
@@ -98,7 +98,7 @@ export const topics: Topic[] = [
       "HTTP 업그레이드로 시작해 양방향 풀-듀플렉스 통신을 지원하는 프로토콜.",
     domain: "network",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "rest-graphql-grpc",
@@ -125,7 +125,7 @@ export const topics: Topic[] = [
       "브라우저 동일 출처 정책과 그 우회 메커니즘. preflight와 헤더 협상.",
     domain: "network",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "load-balancer",
@@ -134,7 +134,7 @@ export const topics: Topic[] = [
       "L4(전송) vs L7(응용) 로드밸런서. 라운드 로빈, Least Conn 등 분배 알고리즘.",
     domain: "network",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "cdn",
@@ -143,7 +143,7 @@ export const topics: Topic[] = [
       "지리적으로 분산된 엣지 서버 네트워크. 캐시 무효화와 origin shield.",
     domain: "network",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "proxy",
@@ -190,7 +190,7 @@ export const topics: Topic[] = [
       "FCFS, SJF, Round Robin, MLFQ — 어떤 프로세스를 언제 실행할지 결정하는 정책.",
     domain: "os",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "synchronization",
@@ -208,7 +208,7 @@ export const topics: Topic[] = [
       "프로세스들이 서로 자원을 기다리며 진행 못하는 상태. 4가지 발생 조건과 회피 전략.",
     domain: "os",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "paging-segmentation",
@@ -244,7 +244,7 @@ export const topics: Topic[] = [
       "실행 중인 프로세스/스레드 상태를 저장하고 다른 것으로 전환하는 과정과 그 비용.",
     domain: "os",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
 
   // ===== 데이터베이스 (6) =====
@@ -255,7 +255,7 @@ export const topics: Topic[] = [
       "B-Tree, Hash Index — 조회 성능을 위한 자료구조와 쓰기 비용 트레이드오프.",
     domain: "database",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "normalization",
@@ -282,7 +282,7 @@ export const topics: Topic[] = [
       "Read Uncommitted부터 Serializable까지 — 동시성과 일관성의 트레이드오프.",
     domain: "database",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "rdb-vs-nosql",
@@ -320,7 +320,7 @@ export const topics: Topic[] = [
       "버블 · 선택 · 삽입 · 병합 · 퀵 · 힙 — 평균과 최악 시간복잡도 비교.",
     domain: "algorithm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "searching",
@@ -347,7 +347,7 @@ export const topics: Topic[] = [
       "깊이 우선 vs 너비 우선 — 스택 vs 큐, 최단 경로 vs 백트래킹.",
     domain: "algorithm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "tree-heap",
@@ -414,7 +414,7 @@ export const topics: Topic[] = [
       "JVM의 메모리 영역과 GC 알고리즘 (Serial, Parallel, G1, ZGC) 비교.",
     domain: "language",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "java-vs-kotlin",

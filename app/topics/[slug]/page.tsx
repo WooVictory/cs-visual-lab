@@ -4,6 +4,19 @@ import { TcpHandshake } from "@/components/visualizations/TcpHandshake";
 import { Http2Multiplexing } from "@/components/visualizations/Http2Multiplexing";
 import { OsiEncapsulation } from "@/components/visualizations/OsiEncapsulation";
 import { DnsResolution } from "@/components/visualizations/DnsResolution";
+import { HttpsHandshake } from "@/components/visualizations/HttpsHandshake";
+import { WebSocketViz } from "@/components/visualizations/WebSocket";
+import { CorsViz } from "@/components/visualizations/CorsViz";
+import { IsolationLevel } from "@/components/visualizations/IsolationLevel";
+import { Sorting } from "@/components/visualizations/Sorting";
+import { GraphTraversal } from "@/components/visualizations/GraphTraversal";
+import { BTreeIndex } from "@/components/visualizations/BTreeIndex";
+import { CpuScheduling } from "@/components/visualizations/CpuScheduling";
+import { Deadlock } from "@/components/visualizations/Deadlock";
+import { ContextSwitch } from "@/components/visualizations/ContextSwitch";
+import { LoadBalancer } from "@/components/visualizations/LoadBalancer";
+import { Cdn } from "@/components/visualizations/Cdn";
+import { JvmGc } from "@/components/visualizations/JvmGc";
 import { TopicContent } from "@/components/TopicContent";
 import { getTopicSidebarContent } from "@/lib/topic-content";
 import { domainLabel, getTopic, topics } from "@/lib/topics";
@@ -24,6 +37,32 @@ function renderVisualization(slug: string) {
       return <OsiEncapsulation slug={slug} />;
     case "dns-resolution":
       return <DnsResolution slug={slug} />;
+    case "https-handshake":
+      return <HttpsHandshake slug={slug} />;
+    case "websocket":
+      return <WebSocketViz slug={slug} />;
+    case "cors":
+      return <CorsViz slug={slug} />;
+    case "isolation-level":
+      return <IsolationLevel slug={slug} />;
+    case "sorting":
+      return <Sorting slug={slug} />;
+    case "graph-dfs-bfs":
+      return <GraphTraversal slug={slug} />;
+    case "db-index":
+      return <BTreeIndex slug={slug} />;
+    case "cpu-scheduling":
+      return <CpuScheduling slug={slug} />;
+    case "deadlock":
+      return <Deadlock slug={slug} />;
+    case "context-switch":
+      return <ContextSwitch slug={slug} />;
+    case "load-balancer":
+      return <LoadBalancer slug={slug} />;
+    case "cdn":
+      return <Cdn slug={slug} />;
+    case "jvm-gc":
+      return <JvmGc slug={slug} />;
     default:
       return null;
   }
