@@ -1,13 +1,6 @@
 import Link from "next/link";
-import type { Topic } from "@/lib/topics";
+import { domainLabel, type Topic } from "@/lib/topics";
 import { ProgressBadge } from "@/components/ProgressBadge";
-
-const domainLabel: Record<Topic["domain"], string> = {
-  network: "네트워크",
-  os: "운영체제",
-  algorithm: "알고리즘",
-  database: "데이터베이스",
-};
 
 export function TopicCard({ topic }: { topic: Topic }) {
   return (
