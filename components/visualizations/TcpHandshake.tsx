@@ -90,7 +90,7 @@ export function TcpHandshake({ slug }: { slug: string }) {
 
       <Diagram step={step} />
 
-      <p className="rounded-lg bg-zinc-50 p-4 text-sm leading-6 text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
+      <p className="rounded-lg bg-zinc-50 p-5 text-[15px] leading-7 text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
         {step.description}
       </p>
 
@@ -107,7 +107,7 @@ export function TcpHandshake({ slug }: { slug: string }) {
             type="button"
             onClick={() => setStepIndex((i) => Math.max(0, i - 1))}
             disabled={!canPrev}
-            className="rounded-lg border border-zinc-200 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-900"
+            className="rounded-lg border border-zinc-200 px-5 py-2.5 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-900"
           >
             이전
           </button>
@@ -115,7 +115,7 @@ export function TcpHandshake({ slug }: { slug: string }) {
             type="button"
             onClick={() => setStepIndex((i) => Math.min(STEPS.length - 1, i + 1))}
             disabled={!canNext}
-            className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+            className="rounded-lg bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
           >
             {canNext ? "다음 단계" : "끝"}
           </button>
@@ -185,10 +185,10 @@ function Diagram({ step }: { step: StepDef }) {
 function Endpoint({ label, state }: { label: string; state: string }) {
   return (
     <div className="flex flex-col items-center gap-2 rounded-xl border-2 border-zinc-900 bg-zinc-50 px-3 py-4 dark:border-zinc-100 dark:bg-zinc-900">
-      <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
+      <span className="text-base font-semibold text-zinc-900 dark:text-zinc-50">
         {label}
       </span>
-      <span className="font-mono text-[11px] text-zinc-600 dark:text-zinc-400">
+      <span className="font-mono text-xs text-zinc-600 dark:text-zinc-400">
         {state}
       </span>
     </div>

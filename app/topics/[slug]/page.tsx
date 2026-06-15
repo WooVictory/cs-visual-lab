@@ -39,19 +39,19 @@ export default async function TopicPage({
     <article className="mx-auto w-full max-w-3xl px-6 py-10 lg:py-16">
       <Link
         href="/"
-        className="mb-8 inline-block text-xs text-zinc-500 transition hover:text-zinc-900 lg:hidden dark:text-zinc-400 dark:hover:text-zinc-50"
+        className="mb-8 inline-block text-sm text-zinc-500 transition hover:text-zinc-900 lg:hidden dark:text-zinc-400 dark:hover:text-zinc-50"
       >
         ← 홈
       </Link>
 
-      <header className="mb-10">
-        <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+      <header className="mb-12">
+        <div className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
           {domainLabel[topic.domain]}
         </div>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
+        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
           {topic.title}
         </h1>
-        <p className="mt-3 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+        <p className="mt-4 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
           {topic.description}
         </p>
       </header>
