@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { AppSidebar } from "@/components/AppSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +31,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full bg-zinc-50 dark:bg-black">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -40,7 +41,10 @@ export default function RootLayout({
           <div className="fixed right-4 top-4 z-50">
             <ThemeToggle />
           </div>
-          {children}
+          <div className="flex min-h-screen">
+            <AppSidebar />
+            <main className="flex flex-1 flex-col">{children}</main>
+          </div>
         </ThemeProvider>
       </body>
     </html>
