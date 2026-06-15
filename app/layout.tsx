@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CS Visual Lab",
-  description: "시각화로 배우고 AI 면접으로 검증하는 CS 학습 도구",
+  title: "Tech Interviewoo",
+  description: "시각화로 익히고 설명으로 검증하는 기술 면접 학습",
 };
 
 export default function RootLayout({

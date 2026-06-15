@@ -53,7 +53,7 @@ export function AppSidebar() {
         className="block border-b border-zinc-200 px-5 py-4 transition hover:bg-zinc-50 dark:border-zinc-800 dark:hover:bg-zinc-900"
       >
         <div className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-          CS Visual Lab
+          Tech Interviewoo
         </div>
         <div className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">
           시각화 + 면접 학습 · {topics.length} 토픽

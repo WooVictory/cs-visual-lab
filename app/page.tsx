@@ -13,10 +13,10 @@ export default function Home() {
     <div className="mx-auto w-full max-w-3xl px-6 py-12 lg:py-20">
       <header className="mb-12">
         <div className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-          CS Visual Lab
+          Tech Interviewoo
         </div>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
-          보면서 이해하고, 설명하면서 검증하는 CS 학습
+          보면서 이해하고, 설명하면서 검증하는 기술 면접 학습
         </h1>
         <p className="mt-5 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
           네트워크 · OS · 데이터베이스 · 알고리즘 · 디자인 패턴 · 언어 —
