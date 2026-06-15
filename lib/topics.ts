@@ -53,7 +53,7 @@ export const topics: Topic[] = [
       "네트워크 통신을 물리 계층부터 응용 계층까지 7개의 추상 계층으로 나눈 표준 모델.",
     domain: "network",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "https-handshake",
@@ -71,7 +71,7 @@ export const topics: Topic[] = [
       "도메인 이름이 IP 주소로 변환되는 재귀/반복 질의와 캐시 단계.",
     domain: "network",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "http-versions",
@@ -80,7 +80,7 @@ export const topics: Topic[] = [
       "HOL blocking, 멀티플렉싱, QUIC까지 — HTTP가 진화해 온 이유.",
     domain: "network",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "udp",

@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TcpHandshake } from "@/components/visualizations/TcpHandshake";
+import { Http2Multiplexing } from "@/components/visualizations/Http2Multiplexing";
+import { OsiEncapsulation } from "@/components/visualizations/OsiEncapsulation";
+import { DnsResolution } from "@/components/visualizations/DnsResolution";
 import { TopicContent } from "@/components/TopicContent";
 import { getTopicSidebarContent } from "@/lib/topic-content";
 import { domainLabel, getTopic, topics } from "@/lib/topics";
@@ -15,6 +18,12 @@ function renderVisualization(slug: string) {
   switch (slug) {
     case "tcp-3-way-handshake":
       return <TcpHandshake slug={slug} />;
+    case "http-versions":
+      return <Http2Multiplexing slug={slug} />;
+    case "osi-7-layers":
+      return <OsiEncapsulation slug={slug} />;
+    case "dns-resolution":
+      return <DnsResolution slug={slug} />;
     default:
       return null;
   }
