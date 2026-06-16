@@ -17,6 +17,33 @@ import { ContextSwitch } from "@/components/visualizations/ContextSwitch";
 import { LoadBalancer } from "@/components/visualizations/LoadBalancer";
 import { Cdn } from "@/components/visualizations/Cdn";
 import { JvmGc } from "@/components/visualizations/JvmGc";
+// AI / LLM
+import { TransformerAttention } from "@/components/visualizations/TransformerAttention";
+import { EmbeddingViz } from "@/components/visualizations/Embedding";
+import { Tokenization } from "@/components/visualizations/Tokenization";
+import { Rag } from "@/components/visualizations/Rag";
+import { VectorDatabase } from "@/components/visualizations/VectorDatabase";
+import { FunctionCalling } from "@/components/visualizations/FunctionCalling";
+import { AiAgent } from "@/components/visualizations/AiAgent";
+// Mobile
+import { AndroidLifecycle } from "@/components/visualizations/AndroidLifecycle";
+import { ComposeRecomposition } from "@/components/visualizations/ComposeRecomposition";
+import { KotlinCoroutines } from "@/components/visualizations/KotlinCoroutines";
+import { FlowColdHot } from "@/components/visualizations/FlowColdHot";
+import { MemoryLeak } from "@/components/visualizations/MemoryLeak";
+// System Design
+import { CachingStrategy } from "@/components/visualizations/CachingStrategy";
+import { MessageQueue } from "@/components/visualizations/MessageQueue";
+import { Saga } from "@/components/visualizations/Saga";
+import { RateLimit } from "@/components/visualizations/RateLimit";
+// Distributed
+import { Raft } from "@/components/visualizations/Raft";
+import { ConsistentHashing } from "@/components/visualizations/ConsistentHashing";
+import { CapTriangle } from "@/components/visualizations/CapTriangle";
+// Security
+import { OAuthFlow } from "@/components/visualizations/OAuthFlow";
+import { WebAttacks } from "@/components/visualizations/WebAttacks";
+
 import { TopicContent } from "@/components/TopicContent";
 import { getTopicSidebarContent } from "@/lib/topic-content";
 import { domainLabel, getTopic, topics } from "@/lib/topics";
@@ -29,6 +56,7 @@ export function generateStaticParams() {
 
 function renderVisualization(slug: string) {
   switch (slug) {
+    // 네트워크
     case "tcp-3-way-handshake":
       return <TcpHandshake slug={slug} />;
     case "http-versions":
@@ -43,6 +71,11 @@ function renderVisualization(slug: string) {
       return <WebSocketViz slug={slug} />;
     case "cors":
       return <CorsViz slug={slug} />;
+    case "load-balancer":
+      return <LoadBalancer slug={slug} />;
+    case "cdn":
+      return <Cdn slug={slug} />;
+    // 알고리즘 / DB
     case "isolation-level":
       return <IsolationLevel slug={slug} />;
     case "sorting":
@@ -51,18 +84,63 @@ function renderVisualization(slug: string) {
       return <GraphTraversal slug={slug} />;
     case "db-index":
       return <BTreeIndex slug={slug} />;
+    // OS
     case "cpu-scheduling":
       return <CpuScheduling slug={slug} />;
     case "deadlock":
       return <Deadlock slug={slug} />;
     case "context-switch":
       return <ContextSwitch slug={slug} />;
-    case "load-balancer":
-      return <LoadBalancer slug={slug} />;
-    case "cdn":
-      return <Cdn slug={slug} />;
+    // Language
     case "jvm-gc":
       return <JvmGc slug={slug} />;
+    // AI / LLM
+    case "transformer-attention":
+      return <TransformerAttention slug={slug} />;
+    case "embedding":
+      return <EmbeddingViz slug={slug} />;
+    case "tokenization":
+      return <Tokenization slug={slug} />;
+    case "rag":
+      return <Rag slug={slug} />;
+    case "vector-database":
+      return <VectorDatabase slug={slug} />;
+    case "function-calling":
+      return <FunctionCalling slug={slug} />;
+    case "ai-agent":
+      return <AiAgent slug={slug} />;
+    // Mobile
+    case "android-lifecycle":
+      return <AndroidLifecycle slug={slug} />;
+    case "jetpack-compose":
+      return <ComposeRecomposition slug={slug} />;
+    case "kotlin-coroutines":
+      return <KotlinCoroutines slug={slug} />;
+    case "flow-stateflow":
+      return <FlowColdHot slug={slug} />;
+    case "android-memory-leak":
+      return <MemoryLeak slug={slug} />;
+    // System Design
+    case "caching-strategy":
+      return <CachingStrategy slug={slug} />;
+    case "message-queue":
+      return <MessageQueue slug={slug} />;
+    case "idempotency-saga":
+      return <Saga slug={slug} />;
+    case "rate-limiting":
+      return <RateLimit slug={slug} />;
+    // Distributed
+    case "consensus-raft":
+      return <Raft slug={slug} />;
+    case "sharding":
+      return <ConsistentHashing slug={slug} />;
+    case "cap-pacelc":
+      return <CapTriangle slug={slug} />;
+    // Security
+    case "oauth-oidc":
+      return <OAuthFlow slug={slug} />;
+    case "xss-csrf-sqli":
+      return <WebAttacks slug={slug} />;
     default:
       return null;
   }

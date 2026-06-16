@@ -458,7 +458,7 @@ export const topics: Topic[] = [
       "Self-attention으로 문맥을 동시에 처리하는 신경망 구조. GPT/BERT의 기반.",
     domain: "ai-llm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "embedding",
@@ -467,7 +467,7 @@ export const topics: Topic[] = [
       "단어/문장을 의미를 보존하는 고차원 벡터로 변환. 유사도 검색의 핵심.",
     domain: "ai-llm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "tokenization",
@@ -476,7 +476,7 @@ export const topics: Topic[] = [
       "텍스트를 모델 입력 단위로 쪼개기. BPE, WordPiece, SentencePiece.",
     domain: "ai-llm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "context-window",
@@ -494,7 +494,7 @@ export const topics: Topic[] = [
       "임베딩 검색으로 관련 문서를 찾아 LLM에 컨텍스트로 주입하는 패턴.",
     domain: "ai-llm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "vector-database",
@@ -503,7 +503,7 @@ export const topics: Topic[] = [
       "임베딩 벡터를 저장하고 유사도 검색을 빠르게 — pgvector, Pinecone, Qdrant.",
     domain: "ai-llm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "prompt-engineering",
@@ -521,7 +521,7 @@ export const topics: Topic[] = [
       "LLM이 외부 함수/API를 스키마에 따라 호출하게 — Agent의 출발점.",
     domain: "ai-llm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "mcp",
@@ -539,7 +539,7 @@ export const topics: Topic[] = [
       "ReAct, Reflection, Multi-agent — LLM이 도구를 쓰며 단계적으로 문제를 푸는 패턴.",
     domain: "ai-llm",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
 
   // ===== 안드로이드 · 모바일 (10) =====
@@ -550,7 +550,7 @@ export const topics: Topic[] = [
       "onCreate → onStart → onResume → ... → onDestroy. 시스템 이벤트가 부르는 콜백 시퀀스.",
     domain: "mobile",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "jetpack-compose",
@@ -559,7 +559,7 @@ export const topics: Topic[] = [
       "선언형 UI vs 명령형 UI. Recomposition과 State 기반의 새로운 패러다임.",
     domain: "mobile",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "kotlin-coroutines",
@@ -568,7 +568,7 @@ export const topics: Topic[] = [
       "suspend 함수, structured concurrency, CoroutineScope — 콜백 지옥 없이 비동기 처리.",
     domain: "mobile",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "flow-stateflow",
@@ -577,7 +577,7 @@ export const topics: Topic[] = [
       "비동기 스트림 (Flow), UI 상태 (StateFlow), 생명주기 인식 (LiveData) — 언제 무엇을 쓰는가.",
     domain: "mobile",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "android-architecture",
@@ -604,7 +604,7 @@ export const topics: Topic[] = [
       "Context 누수, inner class, static 참조 — LeakCanary로 잡는 흔한 패턴들.",
     domain: "mobile",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "work-manager",
@@ -642,7 +642,7 @@ export const topics: Topic[] = [
       "Cache-aside, Write-through, Write-behind, Read-through — 데이터 일관성과 성능 트레이드오프.",
     domain: "system-design",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "message-queue",
@@ -651,7 +651,7 @@ export const topics: Topic[] = [
       "Pub/Sub vs Queue, at-most/at-least/exactly-once delivery — 비동기 통신의 코어.",
     domain: "system-design",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "event-driven",
@@ -687,7 +687,7 @@ export const topics: Topic[] = [
       "재시도 안전성을 위한 멱등 키, 분산 트랜잭션을 보상 트랜잭션으로 묶는 Saga.",
     domain: "system-design",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "rate-limiting",
@@ -696,7 +696,7 @@ export const topics: Topic[] = [
       "Token Bucket, Leaky Bucket, Fixed/Sliding Window — 트래픽 제어 알고리즘.",
     domain: "system-design",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
 
   // ===== 분산 시스템 (5) =====
@@ -707,7 +707,7 @@ export const topics: Topic[] = [
       "분할 시 일관성 vs 가용성 선택. 평상시엔 지연 vs 일관성 — PACELC가 보강.",
     domain: "distributed",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "consensus-raft",
@@ -716,7 +716,7 @@ export const topics: Topic[] = [
       "리더 선출, 로그 복제, 안전성 — 분산 합의를 이해하기 쉬운 알고리즘으로.",
     domain: "distributed",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "data-replication",
@@ -734,7 +734,7 @@ export const topics: Topic[] = [
       "데이터를 키 기준으로 노드에 분산. Hash · Range · Consistent Hashing.",
     domain: "distributed",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "consistency-models",
@@ -754,7 +754,7 @@ export const topics: Topic[] = [
       "위임 인가 (OAuth) + 신원 확인 (OIDC). Auth Code, PKCE, ID Token 흐름.",
     domain: "security",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "password-hashing",
@@ -772,7 +772,7 @@ export const topics: Topic[] = [
       "웹 3대 취약점 — 어떻게 동작하고, 어떻게 방어하는가.",
     domain: "security",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "jwt-security",
