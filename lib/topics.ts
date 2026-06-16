@@ -1,5 +1,10 @@
 export type TopicDomain =
+  | "ai-llm"
+  | "mobile"
   | "network"
+  | "system-design"
+  | "distributed"
+  | "security"
   | "os"
   | "database"
   | "algorithm"
@@ -18,7 +23,12 @@ export type Topic = {
 };
 
 export const domainLabel: Record<TopicDomain, string> = {
+  "ai-llm": "AI / LLM",
+  mobile: "안드로이드 · 모바일",
   network: "네트워크",
+  "system-design": "시스템 디자인",
+  distributed: "분산 시스템",
+  security: "보안",
   os: "운영체제",
   database: "데이터베이스",
   algorithm: "알고리즘 & 자료구조",
@@ -27,7 +37,12 @@ export const domainLabel: Record<TopicDomain, string> = {
 };
 
 export const domainOrder: TopicDomain[] = [
+  "ai-llm",
+  "mobile",
   "network",
+  "system-design",
+  "distributed",
+  "security",
   "os",
   "database",
   "algorithm",
@@ -431,6 +446,349 @@ export const topics: Topic[] = [
     description:
       "Global Interpreter Lock — Python 멀티스레드가 진짜 병렬이 아닌 이유.",
     domain: "language",
+    status: "ready",
+    hasVisualization: false,
+  },
+
+  // ===== AI / LLM (10) =====
+  {
+    slug: "transformer-attention",
+    title: "트랜스포머 & Self-Attention",
+    description:
+      "Self-attention으로 문맥을 동시에 처리하는 신경망 구조. GPT/BERT의 기반.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "embedding",
+    title: "임베딩 (Embedding)",
+    description:
+      "단어/문장을 의미를 보존하는 고차원 벡터로 변환. 유사도 검색의 핵심.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "tokenization",
+    title: "토큰화 (Tokenization)",
+    description:
+      "텍스트를 모델 입력 단위로 쪼개기. BPE, WordPiece, SentencePiece.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "context-window",
+    title: "컨텍스트 윈도우",
+    description:
+      "LLM이 한 번에 처리할 수 있는 토큰 수. 비용과 메모리의 핵심 제약.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "rag",
+    title: "RAG (검색 증강 생성)",
+    description:
+      "임베딩 검색으로 관련 문서를 찾아 LLM에 컨텍스트로 주입하는 패턴.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "vector-database",
+    title: "벡터 데이터베이스",
+    description:
+      "임베딩 벡터를 저장하고 유사도 검색을 빠르게 — pgvector, Pinecone, Qdrant.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "prompt-engineering",
+    title: "프롬프트 엔지니어링",
+    description:
+      "Few-shot, Chain-of-Thought, 역할 부여 — LLM에서 좋은 답을 끌어내는 방법.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "function-calling",
+    title: "함수 호출 (Tool Use)",
+    description:
+      "LLM이 외부 함수/API를 스키마에 따라 호출하게 — Agent의 출발점.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "mcp",
+    title: "MCP (Model Context Protocol)",
+    description:
+      "LLM과 외부 도구/리소스를 표준화된 프로토콜로 연결하는 Anthropic의 오픈 표준.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "ai-agent",
+    title: "AI 에이전트 패턴",
+    description:
+      "ReAct, Reflection, Multi-agent — LLM이 도구를 쓰며 단계적으로 문제를 푸는 패턴.",
+    domain: "ai-llm",
+    status: "ready",
+    hasVisualization: false,
+  },
+
+  // ===== 안드로이드 · 모바일 (10) =====
+  {
+    slug: "android-lifecycle",
+    title: "Activity / Fragment 생명주기",
+    description:
+      "onCreate → onStart → onResume → ... → onDestroy. 시스템 이벤트가 부르는 콜백 시퀀스.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "jetpack-compose",
+    title: "Jetpack Compose vs XML View",
+    description:
+      "선언형 UI vs 명령형 UI. Recomposition과 State 기반의 새로운 패러다임.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "kotlin-coroutines",
+    title: "Kotlin Coroutines",
+    description:
+      "suspend 함수, structured concurrency, CoroutineScope — 콜백 지옥 없이 비동기 처리.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "flow-stateflow",
+    title: "Flow · StateFlow · LiveData",
+    description:
+      "비동기 스트림 (Flow), UI 상태 (StateFlow), 생명주기 인식 (LiveData) — 언제 무엇을 쓰는가.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "android-architecture",
+    title: "앱 아키텍처 (MVVM · MVI · Clean)",
+    description:
+      "UI 상태 관리와 도메인 로직 분리 — 안드로이드 권장 아키텍처와 변형들.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "dependency-injection-android",
+    title: "Hilt · Koin 의존성 주입",
+    description:
+      "안드로이드용 DI 프레임워크 — 컴포넌트 스코프, 빌드 타임 vs 런타임.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "android-memory-leak",
+    title: "안드로이드 메모리 누수",
+    description:
+      "Context 누수, inner class, static 참조 — LeakCanary로 잡는 흔한 패턴들.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "work-manager",
+    title: "WorkManager 백그라운드 작업",
+    description:
+      "앱이 죽어도 보장되는 작업 큐. Doze 모드, 배터리 제약과 함께 동작.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "anr",
+    title: "ANR (Application Not Responding)",
+    description:
+      "메인 스레드 5초 이상 블록 시 발생. 원인 패턴과 디버깅 방법.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "android-build",
+    title: "Gradle · R8 · ProGuard",
+    description:
+      "멀티 모듈 빌드, 코드 축소/난독화, 빌드 시간 최적화의 핵심 도구들.",
+    domain: "mobile",
+    status: "ready",
+    hasVisualization: false,
+  },
+
+  // ===== 시스템 디자인 (7) =====
+  {
+    slug: "caching-strategy",
+    title: "캐싱 전략",
+    description:
+      "Cache-aside, Write-through, Write-behind, Read-through — 데이터 일관성과 성능 트레이드오프.",
+    domain: "system-design",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "message-queue",
+    title: "메시지 큐 (Kafka · RabbitMQ)",
+    description:
+      "Pub/Sub vs Queue, at-most/at-least/exactly-once delivery — 비동기 통신의 코어.",
+    domain: "system-design",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "event-driven",
+    title: "이벤트 드리븐 아키텍처",
+    description:
+      "서비스간 직접 호출 대신 이벤트로 결합도 낮춤. 이벤트 소싱과 CQRS.",
+    domain: "system-design",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "microservices",
+    title: "마이크로서비스 vs 모놀리스",
+    description:
+      "독립 배포 vs 단순 배포, 분산 트레이드오프, 언제 분리하고 언제 합치는가.",
+    domain: "system-design",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "api-gateway",
+    title: "API Gateway · BFF",
+    description:
+      "공통 관심사(인증, rate limit)를 게이트웨이로, 클라이언트별 BFF로 분리.",
+    domain: "system-design",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "idempotency-saga",
+    title: "멱등성 · Saga 패턴",
+    description:
+      "재시도 안전성을 위한 멱등 키, 분산 트랜잭션을 보상 트랜잭션으로 묶는 Saga.",
+    domain: "system-design",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "rate-limiting",
+    title: "Rate Limiting",
+    description:
+      "Token Bucket, Leaky Bucket, Fixed/Sliding Window — 트래픽 제어 알고리즘.",
+    domain: "system-design",
+    status: "ready",
+    hasVisualization: false,
+  },
+
+  // ===== 분산 시스템 (5) =====
+  {
+    slug: "cap-pacelc",
+    title: "CAP · PACELC 정리",
+    description:
+      "분할 시 일관성 vs 가용성 선택. 평상시엔 지연 vs 일관성 — PACELC가 보강.",
+    domain: "distributed",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "consensus-raft",
+    title: "Consensus (Raft)",
+    description:
+      "리더 선출, 로그 복제, 안전성 — 분산 합의를 이해하기 쉬운 알고리즘으로.",
+    domain: "distributed",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "data-replication",
+    title: "데이터 복제",
+    description:
+      "Master-Slave, Multi-Master, Quorum 기반 — 가용성과 일관성의 균형.",
+    domain: "distributed",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "sharding",
+    title: "샤딩 · 파티셔닝",
+    description:
+      "데이터를 키 기준으로 노드에 분산. Hash · Range · Consistent Hashing.",
+    domain: "distributed",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "consistency-models",
+    title: "일관성 모델",
+    description:
+      "Strong · Sequential · Causal · Eventual — 분산에서 '같은 값을 본다'의 정확한 의미.",
+    domain: "distributed",
+    status: "ready",
+    hasVisualization: false,
+  },
+
+  // ===== 보안 (5) =====
+  {
+    slug: "oauth-oidc",
+    title: "OAuth 2.0 · OIDC",
+    description:
+      "위임 인가 (OAuth) + 신원 확인 (OIDC). Auth Code, PKCE, ID Token 흐름.",
+    domain: "security",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "password-hashing",
+    title: "비밀번호 해싱 (bcrypt · Argon2)",
+    description:
+      "salt + cost — 무차별 대입을 의도적으로 느리게. SHA-256으로는 부족한 이유.",
+    domain: "security",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "xss-csrf-sqli",
+    title: "XSS · CSRF · SQL Injection",
+    description:
+      "웹 3대 취약점 — 어떻게 동작하고, 어떻게 방어하는가.",
+    domain: "security",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "jwt-security",
+    title: "JWT 보안 함정",
+    description:
+      "alg=none, key confusion, 만료/취소 어려움 — JWT가 자주 잘못 쓰이는 패턴들.",
+    domain: "security",
+    status: "ready",
+    hasVisualization: false,
+  },
+  {
+    slug: "zero-trust",
+    title: "Zero Trust 아키텍처",
+    description:
+      "네트워크 경계 신뢰 ❌, 모든 접근을 검증. mTLS, 최소 권한, 지속 인증.",
+    domain: "security",
     status: "ready",
     hasVisualization: false,
   },
