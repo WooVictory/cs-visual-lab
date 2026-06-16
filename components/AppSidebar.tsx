@@ -22,28 +22,18 @@ export function AppSidebar() {
     return getTopic(slug)?.domain ?? null;
   }, [pathname]);
 
-  const [expanded, setExpanded] = useState<Set<TopicDomain>>(
-    () => new Set(currentDomain ? [currentDomain] : [])
+  const [openDomain, setOpenDomain] = useState<TopicDomain | null>(
+    () => currentDomain
   );
 
   useEffect(() => {
     if (currentDomain) {
-      setExpanded((prev) => {
-        if (prev.has(currentDomain)) return prev;
-        const next = new Set(prev);
-        next.add(currentDomain);
-        return next;
-      });
+      setOpenDomain(currentDomain);
     }
   }, [currentDomain]);
 
   const toggle = (d: TopicDomain) => {
-    setExpanded((prev) => {
-      const next = new Set(prev);
-      if (next.has(d)) next.delete(d);
-      else next.add(d);
-      return next;
-    });
+    setOpenDomain((prev) => (prev === d ? null : d));
   };
 
   return (
@@ -64,7 +54,7 @@ export function AppSidebar() {
         {domainOrder.map((d) => {
           const list = getTopicsByDomain(d);
           if (list.length === 0) return null;
-          const isOpen = expanded.has(d);
+          const isOpen = openDomain === d;
           return (
             <section key={d} className="mb-1">
               <button
