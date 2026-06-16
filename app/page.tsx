@@ -6,6 +6,7 @@ const PROFILE = {
   role: "안드로이드 엔지니어",
   githubUser: "https://github.com/WooVictory",
   githubRepo: "https://github.com/WooVictory/tech-interviewoo",
+  linkedin: "https://www.linkedin.com/in/seungwoo-lee-590844177/",
 };
 
 export default function Home() {
@@ -86,6 +87,11 @@ export default function Home() {
             label="GitHub 프로필"
             href={PROFILE.githubUser}
             hint="@WooVictory"
+          />
+          <LinkItem
+            label="LinkedIn"
+            href={PROFILE.linkedin}
+            hint="Seungwoo Lee"
           />
         </ul>
       </section>
