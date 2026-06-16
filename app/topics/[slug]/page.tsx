@@ -31,6 +31,7 @@ import { ComposeRecomposition } from "@/components/visualizations/ComposeRecompo
 import { KotlinCoroutines } from "@/components/visualizations/KotlinCoroutines";
 import { FlowColdHot } from "@/components/visualizations/FlowColdHot";
 import { MemoryLeak } from "@/components/visualizations/MemoryLeak";
+import { AndroidArchitecture } from "@/components/visualizations/AndroidArchitecture";
 // System Design
 import { CachingStrategy } from "@/components/visualizations/CachingStrategy";
 import { MessageQueue } from "@/components/visualizations/MessageQueue";
@@ -120,6 +121,8 @@ function renderVisualization(slug: string) {
       return <FlowColdHot slug={slug} />;
     case "android-memory-leak":
       return <MemoryLeak slug={slug} />;
+    case "android-architecture":
+      return <AndroidArchitecture slug={slug} />;
     // System Design
     case "caching-strategy":
       return <CachingStrategy slug={slug} />;

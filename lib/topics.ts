@@ -586,7 +586,7 @@ export const topics: Topic[] = [
       "UI 상태 관리와 도메인 로직 분리 — 안드로이드 권장 아키텍처와 변형들.",
     domain: "mobile",
     status: "ready",
-    hasVisualization: false,
+    hasVisualization: true,
   },
   {
     slug: "dependency-injection-android",
